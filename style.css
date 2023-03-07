@@ -1,0 +1,135 @@
+@import url('https://fonts.google.com/specimen/Lexend+Deca');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+@import url('https://fonts.google.com/specimen/Big+Shoulders+Display');
+
+
+:root {
+    /*Colors*/
+    /*Primary*/
+
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+/*Neutral*/
+
+--Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #ffff;
+}
+
+img {
+    display: block;
+    margin-top: 30px;
+    margin-left: 50px;
+    max-width: 600px;
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+    flex-flow:row wrap;
+    background: var(--Very-light-gray-background-headings-buttons);
+    align-content: center;
+}
+
+.sedans {
+    flex: 1;
+    text-align: center;
+    background-color: var(--Bright-orange);
+    flex-basis: 150px;
+}
+
+.suvs {
+    flex: 1;
+    text-align: center;
+    background-color: var(--Dark-cyan);
+    flex-basis: 150px;
+}
+
+.luxury {
+    
+    flex: 1;
+    text-align: center;
+    background-color: var(--Very-dark-cyan);
+    flex-basis: 150px;
+}
+
+
+
+.title {
+    position: relative;
+    padding-left: 60px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 500;
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+
+.text {
+    display: inline;
+    padding: 10px;
+    color: var(--Transparent-white-paragraphs);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.learn-more {
+    padding: 20px;
+    margin-top: 100px;
+    margin-right: 200px;
+    border: none;
+    border-radius: 30px;
+    width: 150px;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 10px;
+    background-color: #ffff;
+}
+
+.luxury .learn-more{
+    color: var(--Very-dark-cyan);
+}
+.luxury .learn-more:hover{
+    color: #ffff;
+    background-color: var(--Very-dark-cyan);
+    cursor: pointer;
+    border: #ffff solid;
+    font-weight: 500;
+}
+
+.suvs .learn-more{
+    color: var(--Dark-cyan);
+}
+.suvs .learn-more:hover{
+    color: #ffff;
+    background-color: var(--Dark-cyan);
+    cursor: pointer;
+    border: #ffff solid;
+    font-weight: 500;
+}
+
+.sedans .learn-more{
+    color: var(--Bright-orange);
+}
+.sedans .learn-more:hover{
+    color: #ffff;
+    background-color: var(--Bright-orange);
+    cursor: pointer;
+    border: #ffff solid;
+    font-weight: 500;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 1440px) {
+  .main-container .suvs .sedans .luxury{
+    display: flex;
+  }
+
+}
